@@ -30,7 +30,7 @@ bot.on('message', async (message) => {
         try {
             const chatMember = await bot.getChatMember(`@${CHANNEL_USERNAME}`, message.from.id);
             if (chatMember.status === 'left' || chatMember.status === 'kicked') {
-                bot.sendMessage(chat_id, "Please join @KashurTek to continue: [Join Channel](https://t.me/KashurTek)", { parse_mode: 'Markdown', "reply_markup": { "inline_keyboard": buttons } });
+                bot.sendMessage(chat_id, "Please join @KashurTek to continue: [Join Channel](https://t.me/KashurTek)");
             } else {
                 bot.sendMessage(chat_id, "I am shahid nabi", {
                     reply_markup: {
